@@ -21,15 +21,18 @@
         <source id="tvsource" type="application/x-mpegURL" />
       </video>
     </center>
-    <p align="center">
-      Select the channel to watch:
-      <select id="selectChannel">
-        <option value="VTV1">VTV1</option>
-        <option value="VTV2">VTV2</option>
-        <option value="VTV3">VTV3</option>
-        <option value="VTV6">VTV6</option>
-      </select>
-    </p>
+
+    <!-- Method 2 -->
+    <form id="selectChannel">
+      <input type="radio" value="VTV1" name="VTV" id="VTV1" />
+      <label for="VTV1">VTV1</label>
+      <input type="radio" value="VTV2" name="VTV" id="VTV2" />
+      <label for="VTV2">VTV2</label>
+      <input type="radio" value="VTV3" name="VTV" id="VTV3" />
+      <label for="VTV3">VTV3</label>
+      <input type="radio" value="VTV6" name="VTV" id="VTV6"/>
+      <label for="VTV6">VTV6</label>
+    </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
     <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>

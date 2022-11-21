@@ -44,9 +44,9 @@ function parse_query_string(query) {
 }
 
 $(document.body).on("change", "#selectChannel", function (e) {
-  const optVal = $("#selectChannel option:selected").val();
-  console.log(optVal);
-  window.location.replace("?channel=" + optVal);
+  const btnRadio = document.querySelector('input[name=VTV]:checked').value;
+  console.log(btnRadio);
+  window.location.replace("?channel=" + btnRadio);
 });
 
 $(function () {
