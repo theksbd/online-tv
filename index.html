@@ -5,33 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.min.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>S3H Háng Vương</title>
   </head>
   <body>
-    <center id="maintv">
-      <video
-        id="tvplay"
-        class="video-js"
-        width="600"
-        height="450"
-        controls
-        autoplay
-      >
-        <source id="tvsource" type="application/x-mpegURL" />
-      </video>
-    </center>
+    <video
+      id="tvplay"
+      class="video-js"
+      width="600"
+      height="450"
+      controls
+      autoplay
+      muted
+    >
+      <source id="tvsource" type="application/x-mpegURL" />
+    </video>
 
-    <!-- Method 2 -->
     <form id="selectChannel">
-      <input type="radio" value="VTV1" name="VTV" id="VTV1" />
-      <label for="VTV1">VTV1</label>
-      <input type="radio" value="VTV2" name="VTV" id="VTV2" />
-      <label for="VTV2">VTV2</label>
-      <input type="radio" value="VTV3" name="VTV" id="VTV3" />
-      <label for="VTV3">VTV3</label>
-      <input type="radio" value="VTV6" name="VTV" id="VTV6"/>
-      <label for="VTV6">VTV6</label>
+      <div class="grid-container">
+        <!-- <input type="radio" value="VTV1" name="VTV" id="VTV1" />
+        <label for="VTV1">VTV1</label> -->
+        <button class="btn btn-vtv1" value="VTV1">VTV1</button>
+        <!-- <input type="radio" value="VTV2" name="VTV" id="VTV2" />
+        <label for="VTV2">VTV2</label> -->
+        <button class="btn btn-vtv2" value="VTV2">VTV2</button>
+        <!-- <input type="radio" value="VTV3" name="VTV" id="VTV3" />
+        <label for="VTV3">VTV3</label> -->
+        <button class="btn btn-vtv3" value="VTV3">VTV3</button>
+        <!-- <input type="radio" value="VTV5" name="VTV" id="VTV5" />
+        <label for="VTV5">VTV5</label> -->
+        <button class="btn btn-vtv5" value="VTV5">VTV5</button>
+        <!-- <input type="radio" value="VTV6" name="VTV" id="VTV6" />
+        <label for="VTV6">VTV6</label> -->
+        <button class="btn btn-vtv6" value="VTV6">VTV6</button>
+      </div>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>

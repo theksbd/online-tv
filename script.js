@@ -1,3 +1,5 @@
+window.alert = null;
+
 let arr = [
   {
     name: "VTV1",
@@ -13,6 +15,11 @@ let arr = [
     name: "VTV3",
     value:
       "https://vips-livecdn.fptplay.net/hda1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8",
+  },
+  {
+    name: "VTV5",
+    value:
+      "https://vips-livecdn.fptplay.net/hda2/vtv5hd_vhls.smil/chunklist_b5000000.m3u8",
   },
   {
     name: "VTV6",
@@ -43,26 +50,24 @@ function parse_query_string(query) {
   return query_string;
 }
 
-$(document.body).on("change", "#selectChannel", function (e) {
-  const btnRadio = document.querySelector('input[name=VTV]:checked').value;
-  console.log(btnRadio);
-  window.location.replace("?channel=" + btnRadio);
+const btns = document.querySelectorAll(".btn");
+btns.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.replace("?channel=" + this.value);
+  });
 });
 
-$(function () {
+function initializeTV() {
   const query = window.location.search.substring(1);
   const qs = parse_query_string(query);
-  // <!-- console.log("qs: " + qs); -->
-  let cn = "VTV6";
-  if (qs.hasOwnProperty("channel")) {
-    // <!-- console.log("channel: " + qs.channel); -->
-    cn = qs.channel;
-  }
-  let obj = arr.find((o) => o.name === cn);
-  // <!-- console.log(obj); -->
-  document.title = "S3H Háng Vương";
-  document.getElementById("tvsource").src = obj.value;
+  let channel = qs.hasOwnProperty("channel") ? qs.channel : "VTV3";
+  const obj = arr.find((item) => item.name === channel);
+  const url = obj.value;
+  document.getElementById("tvsource").src = url;
   document.getElementById("selectChannel").value = obj.name;
   const player = videojs("tvplay");
   player.play();
-});
+}
+
+initializeTV();
