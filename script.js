@@ -1,5 +1,3 @@
-window.alert = null;
-
 let arr = [
   {
     name: "VTV1",
@@ -27,6 +25,11 @@ let arr = [
       "https://vips-livecdn.fptplay.net/hda1/vtv6hd_vhls.smil/chunklist_b5000000.m3u8",
   },
 ];
+
+const playVideo = document.getElementById("tvplay");
+playVideo.onclick = function () {
+  playVideo.play();
+};
 
 function parse_query_string(query) {
   const params = query.split("&");
