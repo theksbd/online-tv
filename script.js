@@ -1,28 +1,23 @@
 let arr = [
   {
     name: "VTV1",
-    value:
-      "https://vips-livecdn.fptplay.net/hda1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8",
+    value: "https://drfamaga5qlivnt.vcdn.com.vn/vtv01/vtv01@1080p.m3u8",
   },
   {
     name: "VTV2",
-    value:
-      "https://vips-livecdn.fptplay.net/hda1/vtv2_vhls.smil/chunklist_b5000000.m3u8",
+    value: "https://drfamaga5qlivnt.vcdn.com.vn/vtv02/vtv02@1080p.m3u8",
   },
   {
     name: "VTV3",
-    value:
-      "https://vips-livecdn.fptplay.net/hda1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8",
+    value: "https://drfamaga5qlivnt.vcdn.com.vn/vtv03/vtv03@1080p.m3u8",
   },
   {
     name: "VTV5",
-    value:
-      "https://vips-livecdn.fptplay.net/hda2/vtv5hd_vhls.smil/chunklist_b5000000.m3u8",
+    value: "https://drfamaga5qlivnt.vcdn.com.vn/vtv05/vtv05@1080p.m3u8",
   },
   {
     name: "VTV6",
-    value:
-      "https://vips-livecdn.fptplay.net/hda1/vtv6hd_vhls.smil/chunklist_b5000000.m3u8",
+    value: "https://drfamaga5qlivnt.vcdn.com.vn/vtv06/vtv06@1080p.m3u8",
   },
 ];
 
